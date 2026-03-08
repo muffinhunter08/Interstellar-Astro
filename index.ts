@@ -424,11 +424,11 @@ self.addEventListener("fetch", (event) => {
           if (encoding) {
             try {
               if (encoding.includes("br")) {
-                body = zlib.brotliDecompressSync(body);
+                body = Buffer.from(zlib.brotliDecompressSync(body));
               } else if (encoding.includes("gzip")) {
-                body = zlib.gunzipSync(body);
+                body = Buffer.from(zlib.gunzipSync(body));
               } else if (encoding.includes("deflate")) {
-                body = zlib.inflateSync(body);
+                body = Buffer.from(zlib.inflateSync(body));
               }
             } catch (_e) {}
           }
