@@ -7,13 +7,13 @@ Web proxy with multi-tab browser interface.
 ```bash
 git clone https://github.com/UseInterstellar/Interstellar-Astro
 cd Interstellar-Astro
-bun install && bun start
+npm install && npm start
 ```
 
 ## Development
 
 ```bash
-bun install && bun dev
+npm install && npm run dev
 ```
 
 ## Tech Stack

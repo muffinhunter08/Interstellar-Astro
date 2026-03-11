@@ -4,14 +4,14 @@
   "version": "7.0.0",
   "scripts": {
     "dev": "astro dev",
-    "start": "bun run index.ts",
+    "start": "tsx index.ts",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "typecheck": "astro check",
     "clean": "rm -rf dist",
     "astro": "astro",
-    "disable": "bunx astro telemetry disable",
-    "precommit": "bun run typecheck && bun run check",
+    "disable": "npm exec -- astro telemetry disable",
+    "precommit": "npm run typecheck && npm run check",
     "check": "prettier --write . && biome check --write ."
   },
   "dependencies": {
